@@ -17,7 +17,7 @@ public class IntegerVariable {
 		
 		//long 데이터를 저장할 경우 숫자 데이터 끝부분에 알파벳 L or l을 붙인다. 
 		//알파벳은 소문자 혹은 대문자 L이다.
-		long lVal = 12345678900L;
+		//long lVal = 12345678900L;
 
 	}
 

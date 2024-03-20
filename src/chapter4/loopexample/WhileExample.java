@@ -1,0 +1,19 @@
+package chapter4.loopexample;
+
+// 반복문 : While문
+public class WhileExample {
+
+	public static void main(String[] args) {
+		// 1~100까지의 합을 구하라
+		
+		int sum = 0;
+		int i = 1;
+		while (i <= 100) {
+			sum += i;
+			i++;
+		}
+		System.out.println("1~100까지의 합은? " + sum);
+		System.out.println("i의 변수 값은? " + i);
+	}
+
+}
