@@ -1,8 +1,9 @@
 package chapter5.constructor;
 
-//생성자 예제
+//생성자 예제 (constructor)
 //constructor : 생선자
 public class Person {
+	
 	//필드
 	String name;
 	float height;
