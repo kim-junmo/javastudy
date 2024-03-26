@@ -43,6 +43,11 @@ public class Book {
 	public void showBookName(String bookName) {
 		this.bookName = bookName;
 	}
+
+	public void showBookInfo() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

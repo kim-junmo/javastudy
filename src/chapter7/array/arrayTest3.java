@@ -1,6 +1,6 @@
 package chapter7.array;
 
-public class arrayTest3 {
+public class ArrayTest3 {
 	public static void main(String[] args) {
 		
 		//boolean 배열 데이터타입으로 배열이름 boolArr로 요소 10개를 생성구문으로 작성하라
