@@ -88,6 +88,7 @@ public class EqualsTest {
 		
 		/*
 		 정리
+		 객체가 힙영역에 가지고 있는 정보(데이터)가 동일한 데이터라고 간주하고 싶다면
 		 객체비교시 내부적으로 object클래스의 equals()메서드와, hushCode()메서드가 동작된다. (주소값으로 비교)
 		 객체가 참조한고 있는 힙영역의 데이터로 비교하도록, equals()메서드와, hushCode()메서드를 재정의하자.
 		 //힙영역의 데이터값 비교
@@ -105,9 +106,9 @@ public class EqualsTest {
 		System.out.println(st3); // st3.toString()
 		
 		//해쉬코드값 : 힙영역의 기억장소를 가리킬 때 사용하는 코드값.
-		System.out.println(st1.hashCode()); // 1694819250
-		System.out.println(st2.hashCode()); // 1694819250
-		System.out.println(st3.hashCode()); // 1365202186
+		System.out.println(st1.hashCode()); // 1694819250 → 7→
+		System.out.println(st2.hashCode()); // 1694819250 → 7
+		System.out.println(st3.hashCode()); // 1365202186 → 7
 		
 	}
 }
