@@ -1,12 +1,12 @@
 package chapter14.collection;
 
-public class Member /*extends Object*/ {
+public class Member2 /*extends Object*/ {
 	
 	private int memberId;
 	private String memberName;
 	
 	//매개변수가 있는 생성자
-	public Member(int memberId, String memberName) {
+	public Member2(int memberId, String memberName) {
 		super(); //컴파일 과정에서 자동으로 만들어지며 생략해도 괜찮음. object클래스의 기본생성자 호출
 		this.memberId = memberId;
 		this.memberName = memberName;
@@ -14,7 +14,7 @@ public class Member /*extends Object*/ {
 
 	//getter / setter : private접근자를 public을 만들기 위해 존재함.
 	
-	public Member(String memberId2, String string) {
+	public Member2(String memberId2, String string) {
 	}
 
 	public int getMemberId() {
@@ -39,6 +39,24 @@ public class Member /*extends Object*/ {
 		return "Member [memberId=" + memberId + ", memberName=" + memberName + "]";
 	}
 	
+	//객체 비교로 사용되는 메서드 재정의
+	@Override
+	public int hashCode() {
+
+		return memberId;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Member2) {
+			Member2 member = (Member2) obj;
+			if(this.memberId == member.memberId && this.memberName.equals(member.memberName))
+				return true;
+			else
+				return false;
+		}
+		return false;
+	}
 	
 	
 	

@@ -55,7 +55,10 @@ public class EqualsTest {
 		// 즉 힙 영역의 100,손흥민은 스택 영역의 st1, st2가 같이 관리가 된다.
 		Student st3 = new Student(7, "손흥민");
 		
-		//st1객체의 주소와 st3객체의 주소는 다르다.
+		//st1객체의 주소와 st3객체의 주소는 다르다. 고로 서로 다른 객체이다.
+		//객체가 동일한지 비교될때 내부적으로 Object클래스의 equals()와 hashCode()가 사용된다. 
+		//7, "손흥민" 데이터가 같다면 동일한 객체로 인식되게 하자.
+		//그럴려면, Object클래스의 equals()와 hashCode() 재정의해야 동일한 객체로 결과를 만들 수 있다.
 
 		//주소비교
 		if(st1 == st2) {
