@@ -1,6 +1,10 @@
 package chapter14.collection;
 
-public class Member2 /*extends Object*/ {
+//import java.util.Comparator;
+//treeset 클래스에서 이 클래스가 객체생성하여, 데이터로 사용하기 위해서는,
+//아래 인터페이스를 반드시 구현을 해야한다.
+//1. Comparable인터페이스나 또는 2. Comparator인터페이스를 구현해야한다.
+public class Member2 implements Comparable<Member2> {
 	
 	private int memberId;
 	private String memberName;
@@ -56,6 +60,30 @@ public class Member2 /*extends Object*/ {
 				return false;
 		}
 		return false;
+	}
+/*
+	//객체가 대소비교에 사용되는 추상메서드 구현용도로 사용이 되는 메소드이다.
+	//public class Member2 implements Comparator<Member2>
+	//이걸 작성한 후에 아래 가 만들어짐.
+	@Override
+	public int compare(Member2 o1, Member2 o2) {
+		System.out.println("Compare 메서드 호출");
+		//Member2 클래스를 대소비교할 때 기준을 잡아야한다.
+		//memberId를 대소비교를 하는 기준으로 잡음.
+		return o1.getMemberId() - o2.getMemberId();
+	}
+*/
+
+	@Override
+	public int compareTo(Member2 o) {
+		System.out.println("compareTo 메서드 호출");
+//		System.out.println(memberId - o.getMemberId());
+		
+		//오름차순 1001, 1002 순서로 저장
+		return this.memberId - o.getMemberId();
+		
+		//내림차순 1002, 1001 순서로 저장
+		//return (this.memberId - o.getMemberId) * (-1);
 	}
 	
 	
