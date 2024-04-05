@@ -28,7 +28,7 @@ public class TestMyNunber {
 		 인터페이스 변수 = 추상메서드를 구현한 람다식 문법 코딩
 		 */
 		//MyNunber max = 람다식으로 getMax() 추상메서드를 구현작업;
-		//MyNunber max = (int x, int y) -> { return (x >= y) ? x: y;}; 타입과 중괄호, return은 생략가능
+		//MyNunber max = (int x, int y) -> {return (x >= y) ? x: y;}; 타입과 중괄호, return은 생략가능
 		MyNumber max = (x, y) -> (x >= y) ? x: y;
 		System.out.println(max.getMax(10, 20));
 	}
